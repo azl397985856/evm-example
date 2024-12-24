@@ -122,7 +122,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
-                  Connect Actions
+                  Basic Actions
                 </h4>
 
                 <button
@@ -133,19 +133,6 @@
                   Connect
                 </button>
 
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="walletConnect"
-                >
-                Wallet Connect
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sdkConnect"
-                >
-                SDK Connect
-                </button>
-                <hr />
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="getAccounts"
@@ -159,6 +146,11 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row d-flex justify-content-center">
           <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="card">
               <div class="card-body">
@@ -222,23 +214,6 @@
                 >
                   Send EIP 1559 Transaction
                 </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendEIP1559WithoutGasButton"
-                  disabled
-                  hidden
-                >
-                  Send EIP 1559 Without Gas
-                </button>
-                <a
-                  id="sendDeeplinkButton"
-                >
-                  <button
-                    class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Send with Deeplink
-                  </button>
-                </a>
                 <hr />
                 <h4 class="card-title">
                   Piggy bank contract
@@ -331,11 +306,11 @@
             <div class="card full-width">
               <div class="card-body">
                 <h4 class="card-title">
-                  ERC 20
+                  Send Tokens
                 </h4>
 
                 <p class="info-text alert alert-success">
-                  Token(s): <span id="erc20TokenAddresses"></span>
+                  Token(s): <span id="tokenAddresses"></span>
                 </p>
 
                 <div class="form-group">
@@ -374,17 +349,6 @@
                   Transfer Tokens
                 </button>
 
-                <a
-                  id="transferTokensDeeplink"
-                >
-                  <button
-                  class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Transfer Tokens with Deeplink
-                  </button>
-                </a>
-
-                <hr />
                 <div class="form-group">
                   <label>Approve to Address</label>
                   <input
@@ -401,51 +365,7 @@
                 >
                   Approve Tokens
                 </button>
-                <a
-                  id="approveTokensDeeplink"
-                >
-                  <button
-                  class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Approve Tokens with Deeplink
-                  </button>
-                </a>
 
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="increaseTokenAllowance"
-                  disabled
-                >
-                  Increase Token Allowance
-                </button>
-
-                <hr />
-                <div class="form-group">
-                  <label>Owner Address</label>
-                  <input
-                    class="form-control"
-                    id="allowanceOwner"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label>Spender Address</label>
-                  <input
-                    class="form-control"
-                    id="allowanceSpender"
-                  />
-                </div>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="getAllowance"
-                  disabled
-                >
-                  Get Allowance
-                </button>
-                <p class="info-text alert alert-secondary">
-                  Allowance amount: <span id="allowanceAmountResult"></span>
-                </p>
-                <hr />
                 <div class="form-group">
                   <label>Transfer From</label>
                   <input
@@ -468,7 +388,6 @@
                 >
                   Transfer From Tokens
                 </button>
-                <hr />
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="transferTokensWithoutGas"
@@ -484,10 +403,6 @@
                 >
                   Approve Tokens Without Gas
                 </button>
-
-                <p class="info-text alert alert-secondary">
-                  ERC 20 methods result: <span id="tokenMethodsResult"></span>
-                </p>
               </div>
             </div>
           </div>
@@ -497,12 +412,8 @@
             <div class="card full-width">
               <div class="card-body">
                 <h4 class="card-title">
-                  ERC 721
+                  NFTs
                 </h4>
-
-                <p class="info-text alert alert-success">
-                  Token(s): <span id="erc721TokenAddresses"></span>
-                </p>
 
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
@@ -625,40 +536,8 @@
                   </button>
                 </div>
 
-                <div class="form-group">
-                  <label>NFT Permit</label>
-                  <button
-                    class="btn btn-primary btn-lg btn-block mb-3"
-                    id="sign721Permit"
-                    disabled
-                  >
-                    Sign
-                  </button>
-
-                  <p class="info-text alert alert-warning">
-                    Result:
-                    <span id="sign721PermitResult"></span>
-                    <p class="info-text alert alert-warning" id="sign721PermitResultR">r: </p>
-                    <p class="info-text alert alert-warning" id="sign721PermitResultS">s: </p>
-                    <p class="info-text alert alert-warning" id="sign721PermitResultV">v: </p>
-                  </p>
-
-                  <button
-                    class="btn btn-primary btn-lg btn-block mb-3"
-                    id="sign721PermitVerify"
-                    disabled
-                  >
-                    Verify
-                  </button>
-
-                  <p class="info-text alert alert-warning">
-                    Recovery result:
-                    <span id="sign721PermitVerifyResult"></span>
-                  </p>
-                </div>
-
                 <p class="info-text alert alert-secondary">
-                  ERC 721 methods result: <span id="nftsStatus"></span>
+                  NFTs: <span id="nftsStatus"></span>
                 </p>
               </div>
             </div>
@@ -671,10 +550,6 @@
               <h4 class="card-title">
                 ERC 1155
               </h4>
-
-              <p class="info-text alert alert-success">
-                Token(s): <span id="erc1155TokenAddresses"></span>
-              </p>
 
               <button
               class="btn btn-primary btn-lg btn-block mb-3"
@@ -785,7 +660,7 @@
             </div>
 
             <p class="info-text alert alert-secondary">
-              ERC 1155 methods results: <span id="erc1155Status"></span>
+              ERC 1155: <span id="erc1155Status"></span>
             </p>
           </div>
         </div>
@@ -845,7 +720,6 @@
           </div>
         </div>
       </div>
-      </div>
       </section>
 
       <section>
@@ -856,10 +730,8 @@
             <div class="card full-width">
               <div class="card-body">
                 <h4 class="card-title">
-                  PPOM - Malicious Transactions and Signatures
+                  PPOM
                 </h4>
-                <p>We know we are vulnerable if any of these Transactions/Signatures are not flagged as Malicious</p>
-                <h5>Transactions</h5>
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="maliciousRawEthButton"
@@ -868,17 +740,9 @@
                   Malicious Eth Transfer
                 </button>
                 <button
-                class="btn btn-primary btn-lg btn-block mb-3"
-                id="mintSepoliaERC20"
-                hidden
-              >
-                Mint ERC20
-              </button>
-                <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="maliciousERC20TransferButton"
                   disabled
-                  title="This will only be flagged if you have some ERC20 balance"
                 >
                   Malicious ERC20 Transfer (USDC)
                 </button>
@@ -891,19 +755,11 @@
                 </button>
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousContractInteractionButton"
-                  disabled
-                >
-                   Malicious Contract Interaction
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
                   id="maliciousSetApprovalForAll"
                   disabled
                 >
                   Malicious Set Approval For All
                 </button>
-                <h5>Signatures</h5>
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="maliciousPermit"
@@ -928,132 +784,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
-          >
-            <div class="card full-width">
-              <div class="card-body">
-                <h4>
-                  PPOM - Malicious Batching and Queueing
-                </h4>
-                <p>We know we are vulnerable if any of these Transactions/Signatures are not flagged as Malicious</p>
-                <h5>Transactions</h5>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendEIP1559Batch"
-                  disabled
-                >
-                  Send Eth Malicious x10 Batch
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendEIP1559Queue"
-                  disabled
-                >
-                  Send Eth Malicious x10 Queue
-                </button>
-
-                <h5>Signatures</h5>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signTypedDataV4Batch"
-                  disabled
-                >
-                  Sign Malicious x10 Batch
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signTypedDataV4Queue"
-                  disabled
-                >
-                  Sign Malicious x10 Queue
-                </button>
-                <hr />
-                <h4>PPOM - Malicious Deeplinks</h4>
-                <a
-                  id="maliciousSendEthWithDeeplink"
-                >
-                  <button
-                    class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Malicious Eth Transfer With Deeplink
-                  </button>
-                </a>
-                <a
-                  id="maliciousTransferERC20WithDeeplink"
-                >
-                  <button
-                    class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Malicious ERC20 Transfer With Deeplink
-                  </button>
-                </a>
-                <a
-                id="maliciousApproveERC20WithDeeplink"
-                >
-                  <button
-                    class="btn btn-warning btn-lg btn-block mb-3 text-dark"
-                  >
-                  (Mobile) Malicious ERC20 Approval With Deeplink
-                  </button>
-                </a>
-              </div>
-            </div>
           </div>
-          <div
-            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
-          >
-            <div class="card full-width">
-              <div class="card-body">
-                <h4>
-                  PPOM - Malicious Warning Bypasses
-                </h4>
-                <p>We know we are vulnerable if any of these Transactions/Signatures are not flagged as Malicious</p>
-                <h5>Transactions</h5>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousSendWithOddHexData"
-                  disabled
-                >
-                  Malicious Eth Transfer With Odd Hex Data
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousApproveERC20WithOddHexData"
-                  disabled
-                >
-                  Malicious ERC20 Approval With Odd Hex Data
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousSendWithoutHexPrefixValue"
-                  disabled
-                >
-                  Malicious Eth Transfer Without 0x Prefix for Hex Value
-                </button>
-                <h5>Signatures</h5>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousPermitHexPaddedChain"
-                  disabled
-                >
-                  Malicious Permit with Padded chainId
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="maliciousPermitIntAddress"
-                  disabled
-                >
-                  Malicious Permit with Integer Address
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       </section>
 
       <section>
@@ -1386,138 +1117,17 @@
                   Result:
                   <span id="siweResult"></span>
                 </p>
+
+
               </div>
             </div>
-          </div>
-            <div
-            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
-          >
-            <div class="card full-width">
-              <div class="card-body">
-                <h4>
-                  Malformed Signatures
-                </h4>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signInvalidType"
-                  disabled
-                >
-                Invalid Type
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signEmptyDomain"
-                  disabled
-                >
-                Empty Domain
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signExtraDataNotTyped"
-                  disabled
-                >
-                Extra Data not Typed
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signInvalidPrimaryType"
-                  disabled
-                >
-                Invalid Primary Type
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signNoPrimaryTypeDefined"
-                  disabled
-                >
-                No Primary Type Defined
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="signInvalidVerifyingContractType"
-                  disabled
-                >
-                Invalid Verifying Contract Type
-                </button>
-                <p class="info-text alert alert-warning">
-                  Result:
-                  <span id="signMalformedResult"></span>
-                </p>
-              </div>
-          </div>
-        </div>
-          <div
-            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
-          >
-            <div class="card full-width">
-              <div class="card-body">
-                <h4>
-                  Malformed Transactions
-                </h4>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendWithInvalidValue"
-                  disabled
-                >
-                Invalid Value Type (string)
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendWithInvalidTxType"
-                  disabled
-                >
-                Invalid Transaction Type (not supported)
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendWithInvalidRecipient"
-                  disabled
-                >
-                Invalid Recipient (string)
-                </button>
-
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendWithInvalidGasLimit"
-                  disabled
-                >
-                Invalid Gas Limit (string)
-                </button>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="sendWithInvalidMaxFeePerGas"
-                  disabled
-                >
-                Invalid Max Fee Per Gas (string)
-                </button>
-                <p class="info-text alert alert-warning">
-                  Result:
-                  <span id="sendMalformedResult"></span>
-                </p>
-              </div>
           </div>
         </div>
       </section>
       <section>
         <div class="row d-flex justify-content-center">
-          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
-            <div class="card full-width">
-              <div class="card-body">
-                <h4 class="card-title">
-                  JSON RPC Result
-                </h4>
-                <textarea name="json-rpc-response" id="json-rpc-response" rows="5"></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
-            <div class="card full-width">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
                   Ethereum Chain Interactions
@@ -1536,14 +1146,6 @@
                 >
                   Switch to Localhost 8546
                 </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
-            <div class="card full-width">
-              <div class="card-body">
-                <h4 class="card-title">
-                </h4>
               </div>
             </div>
           </div>
@@ -1626,37 +1228,6 @@
                 >
                   Submit
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="row d-flex justify-content-center">
-          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">
-                  ENS Resolution
-                </h4>
-                <div class="form-group">
-                  <label>Address</label>
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="ensInput"
-                  />
-                </div>
-                <button
-                  class="btn btn-primary btn-lg btn-block mb-3"
-                  id="ensSubmit"
-                >
-                  Submit
-                </button>
-                <p class="info-text alert alert-warning">
-                  Result:
-                  <span id="ensResult"></span>
-                </p>
               </div>
             </div>
           </div>
